@@ -31,5 +31,16 @@ namespace StringCalc
             Assert.AreEqual(Expected, result);
         }
 
+
+
+        [TestCase("1,2,3", 6)]
+        [TestCase("2,3,4,5", 14)]
+        [TestCase("1,1,1,1,1,1,1,1", 8)]
+        public void StringCalc_Add_UnknownNumberOFIntsInListReturnSum(string inp, int Expected)
+        {
+            var result = _stringCalc.add(inp);
+            Assert.AreEqual(Expected, result);
+        }
+
     }
 }
