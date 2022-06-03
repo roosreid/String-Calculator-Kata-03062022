@@ -22,5 +22,14 @@ namespace StringCalc
             Assert.AreEqual(Expected, result);
         }
 
+        [TestCase("1,2", 3)]
+        [TestCase("2,3", 5)]
+        [TestCase("3,4", 7)]
+        public void StringCalc_Add_TwoIntsInListReturnSum(string inp, int Expected)
+        {
+            var result = _stringCalc.add(inp);
+            Assert.AreEqual(Expected, result);
+        }
+
     }
 }
