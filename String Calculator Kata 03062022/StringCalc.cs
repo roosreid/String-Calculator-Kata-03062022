@@ -10,8 +10,17 @@ namespace StringCalc
             }
             else
             {
-                var result = Numbers.Split(',').Select(x => int.Parse(x)).Sum();
-                return result;
+                if (Numbers.Contains("\n"))
+                {
+                    var result = Numbers.Split('\n').Select(x => int.Parse(x)).Sum();
+                    return result;
+                }
+                else
+                {
+                    var result = Numbers.Split(',').Select(x => int.Parse(x)).Sum();
+                    return result;
+                }
+
             }
         }
     }
