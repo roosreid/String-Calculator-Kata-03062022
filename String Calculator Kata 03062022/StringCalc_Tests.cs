@@ -4,11 +4,12 @@ namespace StringCalc
 {
     public class StringcalcAdd
     {
+        private StringCalc _stringCalc = new StringCalc(); 
+
         [Test]
         public void StringCalc_Add_EmptyReturns0()
         {
-            var stringCalc = new StringCalc();
-            var result = stringCalc.add("");
+            var result = _stringCalc.add("");
             Assert.AreEqual(0, result); 
         }
 
@@ -17,8 +18,7 @@ namespace StringCalc
         [TestCase("3", 3)]
         public void StringCalc_Add_SingleIntReturnsInt(string inp, int Expected)
         {
-            var stringCalc = new StringCalc();
-            var result = stringCalc.add(inp);
+            var result = _stringCalc.add(inp);
             Assert.AreEqual(Expected, result);
         }
 
