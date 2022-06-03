@@ -57,7 +57,7 @@ namespace StringCalc
         [TestCase("1,2\n1", 4)]
         [TestCase("//&1&1,2", 4)]
         [TestCase("//&1&1\n2", 4)]
-        [TestCase("//&1&1\n2,1", 45)]
+        [TestCase("//&1&1\n2,1", 4)]
         public void StringCalc_Add_AllowsCustomDelimeter(string inp, int Expected)
         {
             var result = _stringCalc.add(inp);

@@ -10,13 +10,16 @@ namespace StringCalc
             }
             else
             {
+                var delimiters = new[] { '\n', ',' };
+
                 if (Numbers.StartsWith("//"))
                 {
-                    var delimiter = Numbers.Substring(2, 1);
+                    char customDelimiter = char.Parse(Numbers.Substring(2, 1));
+                    delimiters = new[] { '\n', ',', customDelimiter};
                     Numbers = Numbers.Substring(3, Numbers.Length - 3);
-                    return Numbers.Split(delimiter).Select(x => int.Parse(x)).Sum();
                 }
-                var result = Numbers.Split(new[] { '\n', ',' }).Select(x => int.Parse(x)).Sum();
+
+                var result = Numbers.Split(delimiters).Select(x => int.Parse(x)).Sum();
                 return result;
             }
         }
