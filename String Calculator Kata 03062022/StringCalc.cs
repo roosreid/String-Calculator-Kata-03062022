@@ -1,10 +1,10 @@
 namespace StringCalc
 {
-    public class StringCalc { 
-
-        public static int add()
+    public class StringCalc
+    {
+        public object add(string Numbers)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 
