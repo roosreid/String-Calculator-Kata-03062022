@@ -5,9 +5,10 @@ namespace StringCalc
     public class StringcalcAdd
     {
         [Test]
-        public void Test1()
+        public void StringCal_Add_EmptyReturns0()
         {
 
         }
+
     }
 }
