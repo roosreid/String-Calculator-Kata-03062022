@@ -43,7 +43,7 @@ namespace StringCalc
         }
 
         [TestCase("1\n2", 3)]
-        [TestCase("2,3\n,5", 10)]
+        [TestCase("2,3\n5", 10)]
         [TestCase("1\n1\n1", 3)]
         public void StringCalc_Add_AllowsNewLineCharacteraswellascomma(string inp, int Expected)
         {
