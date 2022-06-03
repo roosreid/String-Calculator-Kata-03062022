@@ -10,7 +10,8 @@ namespace StringCalc
             }
             else
             {
-                return int.Parse(Numbers); 
+                var result = Numbers.Split(',').Select(x => int.Parse(x)).Sum();
+                return result;
             }
         }
     }
