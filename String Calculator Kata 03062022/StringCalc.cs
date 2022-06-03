@@ -4,7 +4,7 @@ namespace StringCalc
     {
         public object add(string Numbers)
         {
-            return null;
+            return 0;
         }
     }
 
