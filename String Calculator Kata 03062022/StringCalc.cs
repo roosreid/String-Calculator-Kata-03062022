@@ -4,7 +4,14 @@ namespace StringCalc
     {
         public object add(string Numbers)
         {
-            return 0;
+            if (String.IsNullOrEmpty(Numbers))
+            {
+                return 0;
+            }
+            else
+            {
+                return int.Parse(Numbers); 
+            }
         }
     }
 
